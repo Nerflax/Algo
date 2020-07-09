@@ -42,7 +42,7 @@ def algo2(n):
     output_list = n
     while len(output_list) >= output_list[i]:
         remove_every = output_list[i]
-        output_list = [x for i, x in enumerate(output_list) if (i + 1) % remove_every == 0]
+        output_list = [x for i, x in enumerate(output_list) if (i - 1) % remove_every != 0]
         i = i+1
         
     return output_list
